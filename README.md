@@ -9,3 +9,6 @@ docker image build -t test .
 docker container run -e DIR=$(pwd) test
 ```
 
+# What I'm seeing
+The templates are not actually rendered prior to exec being run when this is run inside of Docker alpine-based image
+
