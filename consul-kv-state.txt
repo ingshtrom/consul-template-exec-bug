@@ -1,0 +1,5 @@
+bar:bazzzzzzz
+dir/:
+dir/service1:1
+dir/service2:2
+foo:bar
