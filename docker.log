@@ -1,0 +1,59 @@
+2019/04/19 19:44:44.780127 [INFO] consul-template v0.20.0 (b709612c)
+2019/04/19 19:44:44.780163 [INFO] (runner) creating new runner (dry: false, once: false)
+2019/04/19 19:44:44.780811 [DEBUG] (runner) final config: {"Consul":{"Address":"http://host.docker.internal:8500","Auth":{"Enabled":false,"Username":"","Password":""},"Retry":{"Attempts":15,"Backoff":250000000,"MaxBackoff":10000000000,"Enabled":true},"SSL":{"CaCert":"","CaPath":"","Cert":"","Enabled":false,"Key":"","ServerName":"","Verify":true},"Token":"","Transport":{"DialKeepAlive":30000000000,"DialTimeout":30000000000,"DisableKeepAlives":false,"IdleConnTimeout":90000000000,"MaxIdleConns":100,"MaxIdleConnsPerHost":5,"TLSHandshakeTimeout":10000000000}},"Dedup":{"Enabled":false,"MaxStale":2000000000,"Prefix":"consul-template/dedup/","TTL":15000000000},"Exec":{"Command":"/local/test.sh","Enabled":true,"Env":{"Blacklist":[],"Custom":[],"Pristine":false,"Whitelist":[]},"KillSignal":2,"KillTimeout":30000000000,"ReloadSignal":null,"Splay":0,"Timeout":0},"KillSignal":15,"LogLevel":"trace","MaxStale":30000000000,"PidFile":"","ReloadSignal":1,"Syslog":{"Enabled":false,"Facility":"LOCAL0"},"Templates":[{"Backup":false,"Command":"","CommandTimeout":30000000000,"Contents":"","CreateDestDirs":true,"Destination":"/local/out.txt","ErrMissingKey":false,"Exec":{"Command":"","Enabled":false,"Env":{"Blacklist":[],"Custom":[],"Pristine":false,"Whitelist":[]},"KillSignal":2,"KillTimeout":30000000000,"ReloadSignal":null,"Splay":0,"Timeout":30000000000},"Perms":0,"Source":"/local/in.tpl","Wait":{"Enabled":false,"Min":0,"Max":0},"LeftDelim":"","RightDelim":""},{"Backup":false,"Command":"","CommandTimeout":30000000000,"Contents":"","CreateDestDirs":true,"Destination":"/local/out2.txt","ErrMissingKey":false,"Exec":{"Command":"","Enabled":false,"Env":{"Blacklist":[],"Custom":[],"Pristine":false,"Whitelist":[]},"KillSignal":2,"KillTimeout":30000000000,"ReloadSignal":null,"Splay":0,"Timeout":30000000000},"Perms":0,"Source":"/local/in2.tpl","Wait":{"Enabled":false,"Min":0,"Max":0},"LeftDelim":"","RightDelim":""}],"Vault":{"Address":"","Enabled":false,"Grace":15000000000,"Namespace":"","RenewToken":true,"Retry":{"Attempts":12,"Backoff":250000000,"MaxBackoff":60000000000,"Enabled":true},"SSL":{"CaCert":"","CaPath":"","Cert":"","Enabled":true,"Key":"","ServerName":"","Verify":true},"Transport":{"DialKeepAlive":30000000000,"DialTimeout":30000000000,"DisableKeepAlives":false,"IdleConnTimeout":90000000000,"MaxIdleConns":100,"MaxIdleConnsPerHost":5,"TLSHandshakeTimeout":10000000000},"UnwrapToken":false},"Wait":{"Enabled":true,"Min":60000000000,"Max":300000000000}}
+2019/04/19 19:44:44.781938 [INFO] (runner) creating watcher
+2019/04/19 19:44:44.783703 [INFO] (runner) starting
+2019/04/19 19:44:44.783752 [DEBUG] (runner) running initial templates
+2019/04/19 19:44:44.783756 [DEBUG] (runner) initiating run
+2019/04/19 19:44:44.783823 [DEBUG] (runner) checking template 278141d24d7d8702277c5b6cc4734cb7
+2019/04/19 19:44:44.787101 [DEBUG] (runner) was not watching 1 dependencies
+2019/04/19 19:44:44.787179 [DEBUG] (watcher) adding kv.list(dir)
+2019/04/19 19:44:44.787225 [TRACE] (watcher) kv.list(dir) starting
+2019/04/19 19:44:44.787283 [DEBUG] (runner) checking template 53e140bdb22a0374667d108019667001
+2019/04/19 19:44:44.787434 [DEBUG] (runner) missing data for 1 dependencies
+2019/04/19 19:44:44.787443 [DEBUG] (runner) diffing and updating dependencies
+2019/04/19 19:44:44.787450 [DEBUG] (runner) enabling global quiescence for "278141d24d7d8702277c5b6cc4734cb7"
+2019/04/19 19:44:44.787462 [DEBUG] (runner) enabling global quiescence for "53e140bdb22a0374667d108019667001"
+2019/04/19 19:44:44.787473 [DEBUG] (runner) watching 1 dependencies
+2019/04/19 19:44:44.787507 [TRACE] (view) kv.list(dir) starting fetch
+2019/04/19 19:44:44.787524 [TRACE] kv.list(dir): GET /v1/kv/dir?stale=true&wait=1m0s
+2019/04/19 19:44:44.802570 [TRACE] kv.list(dir): returned 3 pairs
+2019/04/19 19:44:44.802767 [TRACE] (view) kv.list(dir) marking successful data response
+2019/04/19 19:44:44.803014 [TRACE] (view) kv.list(dir) successful contact, resetting retries
+2019/04/19 19:44:44.803032 [TRACE] (view) kv.list(dir) received data
+2019/04/19 19:44:44.803056 [TRACE] (view) kv.list(dir) starting fetch
+2019/04/19 19:44:44.803074 [TRACE] kv.list(dir): GET /v1/kv/dir?index=36&stale=true&wait=1m0s
+2019/04/19 19:44:44.803165 [DEBUG] (runner) receiving dependency kv.list(dir)
+2019/04/19 19:44:44.803202 [DEBUG] (runner) initiating run
+2019/04/19 19:44:44.803208 [DEBUG] (runner) checking template 278141d24d7d8702277c5b6cc4734cb7
+2019/04/19 19:44:44.804000 [DEBUG] (runner) checking template 53e140bdb22a0374667d108019667001
+2019/04/19 19:44:44.805295 [DEBUG] (runner) diffing and updating dependencies
+2019/04/19 19:44:44.805403 [DEBUG] (runner) kv.list(dir) is still needed
+2019/04/19 19:44:44.805414 [DEBUG] (runner) watching 1 dependencies
+2019/04/19 19:44:44.805420 [DEBUG] (runner) all templates rendered
+2019/04/19 19:44:44.805423 [TRACE] (runner) acquired child lock for command, spawning
+2019/04/19 19:44:44.805449 [INFO] (child) spawning: /local/test.sh
+total 24
+drwxr-xr-x    1 root     root          4096 Apr 19 19:36 .
+drwxr-xr-x    1 root     root          4096 Apr 19 19:44 ..
+-rwxr-xr-x    1 root     root           436 Apr 19 19:20 consul-conf.hcl
+-rwxr-xr-x    1 root     root            48 Apr 19 18:51 in.tpl
+-rwxr-xr-x    1 root     root            47 Apr 19 18:51 in2.tpl
+-rwxrwxrwx    1 root     root           259 Apr 19 19:35 test.sh
+foobar
+foobar2
+----------------------------------------
+cat: can't open '/local/out.txt': No such file or directory
+----------------------------------------
+----------------------------------------
+cat: can't open '/local/out2.txt': No such file or directory
+total 24
+drwxr-xr-x    1 root     root          4096 Apr 19 19:36 .
+drwxr-xr-x    1 root     root          4096 Apr 19 19:44 ..
+-rwxr-xr-x    1 root     root           436 Apr 19 19:20 consul-conf.hcl
+-rwxr-xr-x    1 root     root            48 Apr 19 18:51 in.tpl
+-rwxr-xr-x    1 root     root            47 Apr 19 18:51 in2.tpl
+-rwxrwxrwx    1 root     root           259 Apr 19 19:35 test.sh
+2019/04/19 19:44:49.821169 [DEBUG] (cli) receiving signal "child exited"
+2019/04/19 19:44:49.821257 [INFO] (runner) child process died
+2019/04/19 19:44:49.821281 [ERR] (cli) child process died with exit code 0
